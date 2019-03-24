@@ -1,0 +1,8 @@
+const request = require('supertest')
+const userRoute = require('./index')
+
+test('should make GET and return with Hello World!', () => {
+    request(userRoute).get('/').then(response => {
+        expect(response.statusCode).toBe(200);
+    })
+})

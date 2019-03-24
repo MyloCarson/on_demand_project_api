@@ -1,0 +1,39 @@
+{
+  "name": "on_demand_project_api",
+  "version": "1.0.0",
+  "description": "API for on demand hair products and services",
+  "main": "index.js",
+  "author": "Mylo Carson",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:dev": "node server.js",
+    "lint": "eslint src/**",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/config/setup-globals.js"
+      
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "jest": "^24.5.0",
+    "mongodb": "^3.2.2",
+    "mongoose": "^5.4.19",
+    "superagent": "^4.1.0",
+    "supertest": "^4.0.2"
+  }
+}
